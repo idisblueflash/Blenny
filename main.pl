@@ -30,7 +30,7 @@ POE::Session->create(
 # 选择一个昵称。连接到服务器。
 sub bot_start {
   $irc->yield(register => "all");
-  my $nick = 'usepoe' . $$ % 1000;
+  my $nick = 'Blenny' . $$ % 1000;  # 在聊天室里面显示的名字，包括随机数字尾数，处理掉线重新再连接的问题。
   $irc->yield(
     connect => {
       Nick     => $nick,
