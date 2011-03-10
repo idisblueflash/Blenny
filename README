@@ -1,15 +1,29 @@
 Blenny project
-
+Blenny 项目
 
 ===What is Blenny?===
+===什么是Blenny项目？===
+
 Blenny is an IRC bot to help the Chinese Blender (BlenderCN) to organize, collect useful tips, hints and tuts.
-This bot is written by perl.
+This bot is written by Perl.
+Blenny是一个IRC（聊天室）的机器人，用来帮助Blender的中国用户（BlenderCN）整理，收集有用的小经验，提示和教程。
+这个机器人是用Perl语言编写的。
 
 ===Goals===
+===目标===
+
 It's designed as a quick saver for IRC chat user and others. The user can add, search the information really fast.
+它是IRC聊天用户和其他用户快速服务通道。用户可以通过它，便捷的添加，查询信息。
 
 ===Dream===
-We want to give our users a quick, high quality articles about Blender, as free of cause.
+===梦想===
+
+We want to give our users a quick, high quality articles about Blender, as free(and the source code) of cause.
+我们希望给用户一个快速，高质量的Blender文章服务，当然这些都是免费的（甚至包括源代码本身）。
 
 ===How was the name Blenny came from?===
+===Blenny的名字怎么来的？===
+
 Blenny came from  Blender, we just cut the -der and added ny for a nice girl-like name.
+Blenny的名字来自Blender，我们去掉了der加上了ny，这样名字更女性化，容易被人接纳。
+
