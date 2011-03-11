@@ -1,5 +1,11 @@
 #! /usr/bin/perl 
 
+BEGIN {
+  push(@INC, '..');
+}; 
+
+
+
 use warnings;
 use strict;
 use Test::More qw(no_plan);
