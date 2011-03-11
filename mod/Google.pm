@@ -1,7 +1,7 @@
-use strict;
-use warnings;
 package Google;
 # Google的核心查询模块，采用了正则方法匹配。
+use strict;
+use warnings;
 use LWP::UserAgent;
 use LWP::Simple;
 use Data::Dumper;
