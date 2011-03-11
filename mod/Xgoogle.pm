@@ -49,6 +49,6 @@ sub main() {
     my @results = Google::search( $keywords, $max );
     my $n = 1;
     my @re = map { "[" . $n++ . "] $_\0" } @results;
-    return join(" ", @re);
+    return join("", @re);
 }
 1;
