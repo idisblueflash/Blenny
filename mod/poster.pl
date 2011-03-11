@@ -25,30 +25,30 @@ if ($re) {
 if (0) { #将旧功能屏蔽，参考用。
 
     #url to tilte mod
-    my $re = &Url2title::main($msg);
+    $re = &Url2title::main($msg);
     if ($re) { push( @result, "$chan,,$user,,$re" ); }
 
     $msg = &ascii_save_char($msg);
 
     #mods to plug in
     #show emote
-    my $re = qx{perl mod/emote.pl "$msg" "$user"};
+    $re = qx{perl mod/emote.pl "$msg" "$user"};
     if ($re) { push( @result, "$chan,,$user,,$re" ); }
 
     #get currency
-    my $re = qx{perl mod/currency.pl "$msg"};
+    $re = qx{perl mod/currency.pl "$msg"};
     if ($re) { push( @result, "$chan,,$user,,$re" ); }
 
     #sotre in mysql
-    my $re = qx{perl mod/store_in_mysql.pl "$user" "$userhost" "$chan" "$msg"};
+    $re = qx{perl mod/store_in_mysql.pl "$user" "$userhost" "$chan" "$msg"};
     if ($re) { push( @result, "$chan,,$user,,$re" ); }
 
     #ip to geo_location
-    my $re = qx{perl mod/ip.pl "$userhost" "$msg"};
+    $re = qx{perl mod/ip.pl "$userhost" "$msg"};
     if ($re) { push( @result, "$chan,,$user,,$re" ); }
 
     #todo mod
-    my $re = qx{perl mod/todo.pl "$msg"};
+    $re = qx{perl mod/todo.pl "$msg"};
     if ($re) { push( @result, "$chan,,$user,,$re" ); }
 }
 print map { "$_\n" } @result;
