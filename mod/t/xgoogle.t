@@ -8,7 +8,7 @@ BEGIN {
 
 use warnings;
 use strict;
-use Test::More tests => 3 ; 
+use Test::More tests => 4 ; 
 use_ok('Xgoogle') or exit ; #载入Xgoolge模块'
 
 my @needs;
@@ -22,5 +22,7 @@ push @needs, "mp3 love";
 ok( my $normal_result = Xgoogle::main("g perl"), "google主查找，关键词g perl." );
 print $normal_result ;
 ok( $normal_result = Xgoogle::main("doc perl"), "google主查找，关键词doc perl." );
+print $normal_result ;
+ok( $normal_result = Xgoogle::main("s blender"), "blenderCN wiki查找，关键词s blender." );
 print $normal_result ;
 

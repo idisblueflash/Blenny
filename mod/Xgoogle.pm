@@ -15,6 +15,11 @@ sub main() {
         $max      = $1 || $default_max;
         $keywords = $2;
     }
+    elsif ( $msg =~ /^[s?](\d*) (.*)/i ) {
+        $max      = $1 || $default_max;
+        $keywords = $2;
+	$filetype = " site:wiki.blendercn.org" ;
+    }
     elsif ( $msg =~ /^pdf(\d*) (.*)/i ) {
         $max      = $1 || $default_max;
         $keywords = $2;
