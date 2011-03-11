@@ -8,8 +8,8 @@ BEGIN {
 
 use warnings;
 use strict;
-use Test::More qw(no_plan);
-BEGIN { use_ok('Xgoogle'); }
+use Test::More tests => 2 ; 
+use_ok('Xgoogle') or exit ; #载入Xgoolge模块'
 
 my @needs;
 push @needs, "g perl";
@@ -19,6 +19,5 @@ push @needs, "xls perl";
 push @needs, "ppt perl";
 push @needs, "mp3 love";
 
-foreach my $var (@needs) {
-    ok( print &Xgoogle::main($var), "main xgoogle\n" );
-}
+my $normal_result = Xgoogle->main('g perl');
+ok( print $normal_result, "google主查找，关键词g perl." );

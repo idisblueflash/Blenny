@@ -1,6 +1,7 @@
 use strict;
 use warnings;
 package Google;
+# Google的核心查询模块，采用了正则方法匹配。
 use LWP::UserAgent;
 use LWP::Simple;
 use Data::Dumper;
@@ -8,10 +9,10 @@ use Data::Dumper;
 sub _get_response{
     my $stext = shift;
     my $ua = LWP::UserAgent->new;
-    return $ua->get('http://www.google.cn/search?ie=utf-8&oe=utf-8&q='.$stext,
+    return $ua->get('http://www.google.com.hk/search?ie=utf-8&oe=utf-8&q='.$stext,
                     'User-Agent' => 'HwGoogle 0.l',
                     'Accept-Charset' => 'utf-8',
-                    'Accept-Language' => 'en-US');
+                    'Accept-Language' => 'en-US'); #修改成.com.hk替代无效的.cn
 }
 
 sub search {

@@ -1,5 +1,6 @@
 package Xgoogle;
-
+# 调用Google.pm 用来实现一些扩展的查询功能。
+# 查询方式参见下面的例子
 use warnings;
 use strict;
 use Google;
@@ -42,7 +43,7 @@ sub main() {
     $keywords = $keywords . $filetype;
     my @results = Google::search( $keywords, $max );
     my $n = 1;
-    my @re = map { "[" . $n++ . "] $_\0" } @results;
-    return join("", @re);
+    my @re = map { "[" . $n++ . "] $_" } @results;
+    return join(" ", @re);
 }
 1;
