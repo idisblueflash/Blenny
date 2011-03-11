@@ -36,9 +36,9 @@ sub bot_start {
       Nick     => $nick,
       Username => 'Blenny',
       Ircname  => 'POE::Component::IRC cookbook bot',
-      #Server   => 'irc.freenode.net',     # freenode服务器，prot 6667
-      Server   => 'irc.linuxfire.com.cn',  #国内irc站，UTF8port需要是6668 plain/ 7001 ssl
-      Port     => '6668',
+      Server   => 'irc.freenode.net',     # freenode服务器，prot 6667
+      #Server   => 'irc.linuxfire.com.cn',  #国内irc站，UTF8port需要是6668 plain/ 7001 ssl
+      Port     => '6667',
     }
   );
 }
