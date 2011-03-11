@@ -1,5 +1,7 @@
-use lib 'mod/t';
-use Keyword;
+#!/usr/bin/perl 
+use lib 'mod/' ;
+use strict;
+use warnings;
 use Xgoogle;
 use Url2title;
 
