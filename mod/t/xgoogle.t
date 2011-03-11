@@ -20,9 +20,7 @@ push @needs, "ppt perl";
 push @needs, "mp3 love";
 
 ok( my $normal_result = Xgoogle::main("g perl"), "google主查找，关键词g perl." );
-print $normal_result ;
 ok( $normal_result = Xgoogle::main("doc perl"), "google主查找，关键词doc perl." );
-print $normal_result ;
 ok( $normal_result = Xgoogle::main("s blender"), "blenderCN wiki查找，关键词s blender." );
 print $normal_result ;
 
