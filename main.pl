@@ -60,7 +60,7 @@ sub on_public {
 
     #send the msg to poster
     #把信息传给信息分拣员poster
-    my $re = qx{perl mod/poster.pl "$nice" "$where" "$channel" "$msg"};
+    my $re = qx{perl mod/poster.pl "$nick" "$where" "$channel" "$msg"};
     my @reply = split (/\n/,$re);
     
     foreach (@reply){

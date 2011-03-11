@@ -9,14 +9,7 @@ my($user,$userhost,$chan,$msg) = @ARGV;
 
 
 my @result;
-    #keyword mod
-    my $re = &Keyword::main($msg); 
-    if ($re) {
-        my @returns= split (/\0/,$re);
-        foreach(@returns){
-            push (@result,"$chan,,$user,,$_");
-        }
-    }
+    #keyword mod 移除 关键字 模块
 
     #xgoogle mod
     my $re = &Xgoogle::main($msg); 
