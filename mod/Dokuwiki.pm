@@ -11,6 +11,7 @@ use Data::Dumper;
 
 # 参数预设
 my $blendercnWiki = "http://wiki.blendercn.org/";
+my $max = 2;
 
 # 登录测试
 #my $method = 'dokuwiki.login';
@@ -45,7 +46,11 @@ sub search_wiki {
     #循环显示每个结果
     my @reports;
     foreach my $found (@recorders) {
+	if ($max > 0 ){
         push @reports, &handle_namespace( $found->{id} );
+	$max--;
+	}else{
+	}
     }
     my $n = 1;                                #定义结果序号的起始位置
     my @re = map { $n++ . ".$_\0" } @reports;
