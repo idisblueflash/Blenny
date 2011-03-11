@@ -57,6 +57,20 @@ sub on_public {
   my $channel = $where->[0];
   my $ts      = scalar localtime;
   print " [$ts] <$nick:$channel> $msg\n";
+
+    #send the msg to poster
+    #把信息传给信息分拣员poster
+    my $re = qx{perl mod/poster.pl "$nice" "$where" "$channel" "$msg"};
+    my @reply = split (/\n/,$re);
+    
+    foreach (@reply){
+            my ($chan,$user,$re) = split (/,,/,$_);
+            if($re ne "\n"){
+                print "chan=$chan, user=$user, re=$re\n\n";
+    		$irc->yield(privmsg => CHANNEL, $re);
+            }
+    }
+
   if (my ($rot13) = $msg =~ /^rot13 (.+)/) {
     $rot13 =~ tr[a-zA-Z][n-za-mN-ZA-M];
 
