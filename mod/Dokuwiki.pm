@@ -11,7 +11,6 @@ use Data::Dumper;
 
 # 参数预设
 my $blendercnWiki = "http://wiki.blendercn.org/";
-my $max = 2;
 
 # 登录测试
 #my $method = 'dokuwiki.login';
@@ -25,7 +24,8 @@ my $max = 2;
 
 # 查询测试
 sub search_wiki {
-    my $keys        = shift;
+    my $keys = shift;
+    my $max  = shift || 2 ;
     my @search_keys = split( /\ /, $keys );
     my $method      = 'dokuwiki.search';
     my $server      = Frontier::Client->new(

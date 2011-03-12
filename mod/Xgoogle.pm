@@ -22,7 +22,7 @@ sub main() {
     elsif ( $msg =~ /^[s?](\d*) (.*)/i ) {
         $max      = $1 || $default_max;
         $keywords = $2;
-        $final_re = Dokuwiki::search_wiki($keywords);
+        $final_re = Dokuwiki::search_wiki($keywords,$max);
         $keywords = "ffound";
     }
     elsif ( $msg =~ /^pdf(\d*) (.*)/i ) {
